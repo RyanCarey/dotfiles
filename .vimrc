@@ -12,7 +12,6 @@ set smarttab
 " treat long lines as break lines when moving around them 
 map j gj
 map k gk 
- 
 set tabstop=2
 set shiftwidth=2
 syntax on
