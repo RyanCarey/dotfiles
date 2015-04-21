@@ -9,10 +9,8 @@ set hlsearch
 set incsearch 
 set expandtab
 set smarttab 
-" treat long lines as break lines when moving around them 
-map j gj
-map k gk 
-set tabstop=2
-set shiftwidth=2
+
+set tabstop=4
+set shiftwidth=4
 syntax on
 set autoindent
