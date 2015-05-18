@@ -14,9 +14,10 @@ sudo apt-get update
 sudo apt-get install nvidia-cuda-toolkit
 
 # get caffe
-mkdir -p ~/numerics/caffe
-cd ~/numerics/caffe
+mkdir -p ~/numerics
+cd ~/numerics
 git clone https://github.com/BVLC/caffe.git
+cd caffe
 
 # caffe
 cp Makefile.config.example Makefile.config
