@@ -1,4 +1,4 @@
-#14.04, for CUDA 7.0
+#14.04, basic non-optimized install
 
 ### Before starting, make sure cpu throttling is turned off 
 ### http://askubuntu.com/questions/523640/how-i-can-disable-cpu-frequency-scaling-and-set-the-system-to-performance
