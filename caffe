@@ -1,0 +1,30 @@
+### Before starting, make sure cpu throttling is turned off
+
+# prerequisites
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev 
+sudo apt-get install libhdf5-serial-dev protobuf-compiler gfortran libjpeg62 libfreeimage-dev libatlas-base-dev
+sudo apt-get install libgoogle-glog-dev libbz2-dev libxml2-dev libxslt-dev libffi-dev 
+sudo apt-get install libssl-dev libgflags-dev liblmdb-dev python-yaml
+sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-base-dev
+
+#cuda
+sudo dpkg -i cuda-repo-ubuntu1404_7.0-28_amd64.deb 
+sudo apt-get update
+sudo apt-get install nvidia-cuda-toolkit
+
+# get caffe
+mkdir -p ~/numerics/caffe
+cd ~/numerics/caffe
+git clone https://github.com/BVLC/caffe.git
+
+# caffe
+cp Makefile.config.example Makefile.config
+# Adjust Makefile.config
+make all
+make test
+make runtest
+
+
+
+
+
