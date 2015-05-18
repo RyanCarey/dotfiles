@@ -1,6 +1,10 @@
 #14.04, for CUDA 7.0
 
-### Before starting, make sure cpu throttling is turned off
+### Before starting, make sure cpu throttling is turned off 
+### http://askubuntu.com/questions/523640/how-i-can-disable-cpu-frequency-scaling-and-set-the-system-to-performance
+sudo apt-get install cpufrequtils
+sudo sh -c 'echo GOVERNOR="performance" >> /etc/default/cpufrequtils'
+
 
 # prerequisites
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
