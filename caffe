@@ -9,7 +9,8 @@ sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compi
 sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-base-dev
 
 #cuda
-sudo dpkg -i cuda-repo-ubuntu1404_7.0-28_amd64.deb 
+cd ~/Downloads
+curl http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/rpmdeb/cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb > ./cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb
 sudo apt-get update
 sudo apt-get install nvidia-cuda-toolkit
 
