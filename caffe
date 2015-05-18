@@ -22,9 +22,9 @@ cd caffe
 # caffe
 cp Makefile.config.example Makefile.config
 # Adjust Makefile.config
-make all
-make test
-make runtest
+sudo make all
+sudo make test
+sudo make runtest
 
 
 
