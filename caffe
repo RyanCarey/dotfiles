@@ -1,10 +1,11 @@
+#14.04, for CUDA 4.0 7.0
+
 ### Before starting, make sure cpu throttling is turned off
 
 # prerequisites
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev 
-sudo apt-get install libhdf5-serial-dev protobuf-compiler gfortran libjpeg62 libfreeimage-dev libatlas-base-dev
-sudo apt-get install libgoogle-glog-dev libbz2-dev libxml2-dev libxslt-dev libffi-dev 
-sudo apt-get install libssl-dev libgflags-dev liblmdb-dev python-yaml
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
+
 sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-base-dev
 
 #cuda
