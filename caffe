@@ -9,7 +9,6 @@ sudo update-rc.d ondemand disable
 # prerequisites
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
-
 sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-base-dev
 
 #cuda
@@ -26,7 +25,7 @@ cd caffe
 
 # caffe
 cp Makefile.config.example Makefile.config
-# Adjust Makefile.config
+# Adjust Makefile.config: comment lines 15,  22-27. uncomment line 18. change line 12 to 'CUSTOM_CXX := g++-4.6'
 sudo make all
 sudo make test
 sudo make runtest
