@@ -1,53 +1,50 @@
-#14.04, basic non-optimized install
+###for ubuntu 14.04 and cuda
 
-### Before starting, make sure cpu throttling is turned off 
-### http://askubuntu.com/questions/523640/how-i-can-disable-cpu-frequency-scaling-and-set-the-system-to-performance
+## Before starting, make sure cpu throttling is turned off as per 
+## http://askubuntu.com/questions/523640/how-i-can-disable-cpu-frequency-scaling-and-set-the-system-to-performance
 sudo apt-get install cpufrequtils
 sudo sh -c 'echo GOVERNOR="performance" >> /etc/default/cpufrequtils'
 sudo update-rc.d ondemand disable
 
-#cuda as per http://askubuntu.com/questions/533424/how-to-install-cuda-6-5-on-ubuntu-14-04
+### cuda as per http://askubuntu.com/questions/451672/installing-and-testing-cuda-in-ubuntu-14-04
 mkdir ~/Downloads/nvidia_installers
 
-### press Ctrl-Alt-F1 to go to root
+## press Ctrl-Alt-F1 to go to root
 ../cuda_6.0.37_linux_64.run -extract=~/Downloads/nvidia_installers;
 sudo apt-get --purge remove nvidia-*
 cd ~/Downloads/nvidia_installers;
 sudo service lightdm stop
 sudo killall Xorg
-sudo ./NVIDIA-Linux-x86_64-331.62.run   # use default install options
+sudo ./NVIDIA-Linux-x86_64-346.46.run # use default install options
 sudo modprobe nvidia
-sudo ./cuda-linux64-rel-6.0.37-18176142.run
-sudo ./cuda-samples-linux-6.0.37-18176142.run
-sudo reboot
-### no need to be root anymore
+sudo ./cuda-linux64-rel-7.0.28-19326674.run
+sudo ./cuda-samples-linux-7.0.28-19326674.run
 
-# test CUDA
+### test CUDA
 cd /usr/local/cuda/samples
 sudo chmod -R +7 *
 cd 1_Utilities/deviceQuery
 sudo make
 ./deviceQuery 
+lsmod | grep nv #check nvidia driver present
 
-# prerequisites for caffe
+sudo reboot
+### no need to be root anymore
+
+### prerequisites for caffe
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
 sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-base-dev
 
-cd ~/Downloads
-curl http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/rpmdeb/cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb > ./cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb
-sudo apt-get update
-sudo apt-get install nvidia-cuda-toolkit
 
-# get caffe
+### get caffe
 mkdir -p ~/numerics
 cd ~/numerics
 git clone https://github.com/BVLC/caffe.git
 cd caffe
 
-# caffe
 cp Makefile.config.example Makefile.config
-# Adjust Makefile.config: comment lines 15,  22-27. uncomment line 18. change line 12 to 'CUSTOM_CXX := g++-4.6'
+# Adjust Makefile.config: line 12 to 'CUSTOM_CXX := g++-4.6'
 sudo make all
 sudo make test
 sudo make runtest
