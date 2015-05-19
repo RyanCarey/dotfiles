@@ -47,6 +47,8 @@ cp Makefile.config.example Makefile.config
 # Adjust Makefile.config: line 12 to 'CUSTOM_CXX := g++-4.6'
 sudo make all
 sudo make test
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+sudo ldconfig /usr/local/cuda/lib64
 sudo make runtest
 
 
