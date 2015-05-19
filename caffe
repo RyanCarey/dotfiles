@@ -1,4 +1,4 @@
-###for ubuntu 14.04 and cuda
+###for ubuntu 14.04, cuda 7.0, nvidia 346
 
 ## Before starting, make sure cpu throttling is turned off as per 
 ## http://askubuntu.com/questions/523640/how-i-can-disable-cpu-frequency-scaling-and-set-the-system-to-performance
