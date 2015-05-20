@@ -9,7 +9,7 @@ sudo update-rc.d ondemand disable
 ### cuda as per http://askubuntu.com/questions/451672/installing-and-testing-cuda-in-ubuntu-14-04
 cd ~/Downloads
 wget http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/cuda_7.0.28_linux.run
-mkdir ~/Downloads/nvidia_installers
+mkdir nvidia_installers
 
 ## press Ctrl-Alt-F1 to go to root
 ./cuda_6.0.37_linux_64.run -extract=~/Downloads/nvidia_installers;
