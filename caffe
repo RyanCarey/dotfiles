@@ -38,6 +38,8 @@ sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev 
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
 sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-base-dev
 
+### openblas
+sudo apt-get install libopenblas-base
 
 ### get caffe
 mkdir -p ~/numerics
@@ -46,14 +48,18 @@ git clone https://github.com/BVLC/caffe.git
 cd caffe
 
 cp Makefile.config.example Makefile.config
-# Adjust Makefile.config: line 12 to 'CUSTOM_CXX := g++-4.6'
+# Adjust Makefile.config: line 12 to 'CUSTOM_CXX := g++-4.6', 
 sudo make all
 sudo make test
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+sudo sh -c 'echo export CAFFE_ROOT=/home/ryan/numerics/caffe >> ~/.bashrc'
+source ~/.bashrc
 sudo ldconfig /usr/local/cuda/lib64
 sudo make runtest
 
-
-
+# make python interface as per http://peerajakwitoonchart.blogspot.co.uk/2015/02/caffe-installation-on-ubuntu-1404-log.html
+make pycaffe
+sudo apt-get install numpy scipy
+sudo pip install matplotlib numexpr tables
 
 
