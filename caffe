@@ -56,6 +56,7 @@ sudo sh -c 'echo export CAFFE_ROOT=/home/ryan/numerics/caffe >> ~/.bashrc'
 source ~/.bashrc
 sudo ldconfig /usr/local/cuda/lib64
 sudo make runtest
+sudo ln -s ~/numerics/caffe/build/tools/caffe /usr/bin/caffe
 
 # make python interface as per http://peerajakwitoonchart.blogspot.co.uk/2015/02/caffe-installation-on-ubuntu-1404-log.html
 sudo apt-get install numpy scipy
