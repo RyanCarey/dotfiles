@@ -58,8 +58,8 @@ sudo ldconfig /usr/local/cuda/lib64
 sudo make runtest
 
 # make python interface as per http://peerajakwitoonchart.blogspot.co.uk/2015/02/caffe-installation-on-ubuntu-1404-log.html
-make pycaffe
 sudo apt-get install numpy scipy
 sudo pip install matplotlib numexpr tables
+make pycaffe
 
 
