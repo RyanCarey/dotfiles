@@ -39,7 +39,7 @@ sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compi
 sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-base-dev
 
 ### openblas
-sudo apt-get install libopenblas-base
+sudo apt-get install libopenblas-dev
 
 ### install cudnn
 wget https://developer.nvidia.com/rdp/assets/cudnn-65-linux-v2-asset
