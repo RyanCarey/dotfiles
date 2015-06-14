@@ -12,7 +12,7 @@ wget http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers
 mkdir nvidia_installers
 
 ## press Ctrl-Alt-F1 to go to root
-./cuda_6.0.37_linux_64.run -extract=~/Downloads/nvidia_installers;
+./cuda_7.0.28_linux_64.run -extract=~/Downloads/nvidia_installers;
 sudo apt-get --purge remove nvidia-*
 cd nvidia_installers;
 sudo service lightdm stop
