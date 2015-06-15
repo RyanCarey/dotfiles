@@ -67,8 +67,8 @@ sudo ln -s ~/numerics/caffe/build/tools/caffe /usr/bin/caffe
 
 # make python interface as per http://peerajakwitoonchart.blogspot.co.uk/2015/02/caffe-installation-on-ubuntu-1404-log.html
 sudo pip install numpy 
-sudo apt-get install python-scipy
-sudo pip install matplotlib numexpr tables
+sudo apt-get install python-scipy python-matplotlib
+sudo pip install numexpr tables
 sudo make pycaffe
 
 
