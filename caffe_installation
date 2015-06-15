@@ -44,8 +44,8 @@ sudo apt-get install libopenblas-dev
 ### install cudnn
 google-chrome https://developer.nvidia.com/rdp/assets/cudnn-65-linux-v2-asset #download .tgz
 tar -xzvf cudnn-6.5-linux-x64-v2.tgz
-sudo cp lib* /usr/local/cuda/lib64/
-sudo cp cudnn.h /usr/local/cuda/include/
+sudo cp cudnn-6.5-linux-x64-v2/lib* /usr/local/cuda/lib64/
+sudo cp cudnn-6.5-linux-x64-v2/cudnn.h /usr/local/cuda/include/
 
 ### get caffe
 mkdir -p ~/numerics
