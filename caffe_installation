@@ -42,7 +42,7 @@ sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib libatlas-
 sudo apt-get install libopenblas-dev
 
 ### install cudnn
-wget https://developer.nvidia.com/rdp/assets/cudnn-65-linux-v2-asset
+google-chrome https://developer.nvidia.com/rdp/assets/cudnn-65-linux-v2-asset #download .tgz
 tar -xzvf cudnn-6.5-linux-x64-v2.tgz
 sudo cp lib* /usr/local/cuda/lib64/
 sudo cp cudnn.h /usr/local/cuda/include/
