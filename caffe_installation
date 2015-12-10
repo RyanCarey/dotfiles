@@ -11,7 +11,7 @@ cd ~/Downloads
 wget http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/cuda_7.0.28_linux.run
 mkdir nvidia_installers
 
-chmod +7 cuda_7.0.28_linux.run 
+sudo chmod +7 cuda_7.0.28_linux.run 
 sudo ./cuda_7.0.28_linux.run -extract=~/Downloads/nvidia_installers
 
 ## press Ctrl-Alt-F1 to go to root
@@ -56,6 +56,9 @@ cd ~/numerics
 git clone https://github.com/BVLC/caffe.git
 cd caffe
 
+sudo pip install numpy 
+sudo apt-get install python-scipy python-matplotlib
+
 cp Makefile.config.example Makefile.config
 # Adjust Makefile.config: line 12 to 'CUSTOM_CXX := g++-4.6', line 33 to 'BLAS := open', line 5 to 'USE_CUDNN := 1'
 sudo make all
@@ -68,8 +71,7 @@ sudo make runtest
 sudo ln -s ~/numerics/caffe/build/tools/caffe /usr/bin/caffe
 
 # make python interface as per http://peerajakwitoonchart.blogspot.co.uk/2015/02/caffe-installation-on-ubuntu-1404-log.html
-sudo pip install numpy 
-sudo apt-get install python-scipy python-matplotlib
+
 sudo pip install numexpr tables
 sudo make pycaffe
 
