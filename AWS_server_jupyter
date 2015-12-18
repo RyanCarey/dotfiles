@@ -1,4 +1,7 @@
+# more: https://gist.github.com/iamatypeofwalrus/5183133
+
 # set up server with https access on my ip
+
 
 sudo apt-get install python3-numpy python3-scipy python3-matplotlib --fix-missing
 sudo apt-get update
@@ -7,6 +10,10 @@ sudo pip3 install jupyter
 sudo pip3 install scikit-learn
 sudo apt-get install htop
 
-# scp jupyter config across from local computer
+# local: scp -i 'freeaws.pem' /home/ubuntu/.jupyter
+
+mkdir certificates
+cd certificates
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout jupcert.pem -out jupcert.pem
 
 # if needed, save image and boot up better server
