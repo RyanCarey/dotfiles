@@ -6,8 +6,7 @@
 sudo apt-get install python3-numpy python3-scipy python3-matplotlib --fix-missing
 sudo apt-get update
 sudo apt-get install python3-pip
-sudo pip3 install jupyter 
-sudo pip3 install scikit-learn
+sudo pip3 install jupyter scikit-learn pandas
 sudo apt-get install htop
 
 # local: scp -i 'freeaws.pem' /home/ubuntu/.jupyter
