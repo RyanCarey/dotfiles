@@ -1,0 +1,12 @@
+# set up server with https access on my ip
+
+sudo apt-get install python3-numpy python3-scipy python3-matplotlib --fix-missing
+sudo apt-get update
+sudo apt-get install python3-pip
+sudo pip3 install jupyter 
+sudo pip3 install scikit-learn
+sudo apt-get install htop
+
+# scp jupyter config across from local computer
+
+# if needed, save image and boot up better server
