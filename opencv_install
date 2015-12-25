@@ -23,6 +23,8 @@ sudo apt-get -y install x264 v4l-utils ffmpeg
 # as per http://askubuntu.com/questions/244133/how-do-i-get-egl-and-opengles-libraries-for-ubuntu-running-on-virtualbox
 sudo apt-get install mesa-utils-extra libegl1-mesa 
 
+# if NCVPixelOperations.hpp issues -> http://ubuntuforums.org/showthread.php?t=2244063
+
 echo "Downloading OpenCV 2.4.9"
 wget -O OpenCV-2.4.9.zip http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.9/opencv-2.4.9.zip/download
 echo "Installing OpenCV 2.4.9"
