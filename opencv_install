@@ -1,3 +1,5 @@
+#Run this in any folder e.g. ~/Downloads to download and install OpenCV
+
 arch=$(uname -m)
 if [ "$arch" == "i686" -o "$arch" == "i386" -o "$arch" == "i486" -o "$arch" == "i586" ]; then
 flag=1
