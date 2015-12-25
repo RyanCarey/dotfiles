@@ -44,3 +44,10 @@ sudo ldconfig
 cd ../../..
 rm -rf OpenCV
 echo "OpenCV 2.4.9 ready to be used"
+
+
+# then python, import cv2
+# as needed, also move module to python path as per:
+# https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_setup/py_setup_in_fedora/py_setup_in_fedora.html#install-opencv-python-in-fedora
+# and then do:
+# http://stackoverflow.com/questions/19164343/opencv-libopencv-core-so-2-4-cannot-open-shared-object-file-no-such-file-or
