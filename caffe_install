@@ -20,6 +20,7 @@ cd nvidia_installers;
 sudo service lightdm stop
 sudo killall Xorg
 sudo ./NVIDIA-Linux-x86_64-346.46.run # use default install options
+# if "unable to load kernel module", try http://stackoverflow.com/questions/24734986/unable-to-load-the-kernel-module-nvidia-ko
 sudo modprobe nvidia
 sudo ./cuda-linux64-rel-7.0.28-19326674.run
 sudo ./cuda-samples-linux-7.0.28-19326674.run
