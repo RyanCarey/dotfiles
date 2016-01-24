@@ -1,0 +1,11 @@
+sudo apt-get install git
+
+mkdir ~/ml
+cd ~/ml
+
+git clone https://github.com/dmlc/xgboost.git
+make -j4
+cd xgboost
+make
+cd python-package
+python setup.py install
